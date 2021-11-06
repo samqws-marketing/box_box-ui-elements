@@ -37,6 +37,7 @@ jobs:
         run: |
           npm install -g yarn
           yarn install --only=prod
+          npm run build:es
       - name: WhiteSource Unified Agent Scan
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
